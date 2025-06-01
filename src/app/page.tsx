@@ -27,23 +27,6 @@ export default function Home() {
 
   return (
     <div className={styles.pageWrapper}>
-      {/* Background elements */}
-      <div className={styles.backgroundElements}>
-        <div className={styles.blurCircle1}></div>
-        <div className={styles.blurCircle2}></div>
-        <div className={styles.blurCircle3}></div>
-        
-        {/* Floating particles */}
-        {[...Array(5)].map((_, i) => (
-          <div key={`particle-${i + 1}`} className={`${styles.floatingParticle} ${styles[`particle${i + 1}`]}`}></div>
-        ))}
-        
-        {/* Random floating dots */}
-        {[...Array(20)].map((_, i) => (
-          <div key={`dot-${i + 1}`} className={`${styles.floatingDot} ${styles[`dot${i + 1}`]}`}></div>
-        ))}
-      </div>
-
       <Navigation />
       <div className={styles.mainContent}>
         {/* Hero Section */}
@@ -149,7 +132,15 @@ export default function Home() {
               Discover the talented individuals behind Astrakit and learn how their expertise shapes our platform.
             </p>
             <div className={styles.teamGrid}>
-              {/* Team members will be added here */}
+              <div className={styles.teamMember}>
+                <iframe src="https://api.astrakit.cc/iframe-profile?username=catpawzz" className={styles.teamMemberIframe}></iframe>
+              </div>
+              <div className={styles.teamMember}>
+                <iframe src="https://api.astrakit.cc/iframe-profile?username=snupai" className={styles.teamMemberIframe}></iframe>
+              </div>
+              <div className={styles.teamMember}>
+                <iframe src="https://api.astrakit.cc/iframe-profile?username=yuuiko" className={styles.teamMemberIframe}></iframe>
+              </div>
             </div>
           </div>
         </section>

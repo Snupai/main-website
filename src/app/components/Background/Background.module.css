@@ -1,0 +1,126 @@
+.backgroundElements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Blur Circles */
+.blurCircle1, .blurCircle2, .blurCircle3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+}
+
+.blurCircle1 {
+  width: 600px;
+  height: 600px;
+  background: var(--main-color);
+  top: -100px;
+  right: -100px;
+  animation: floatCircle 20s infinite alternate;
+}
+
+.blurCircle2 {
+  width: 400px;
+  height: 400px;
+  background: #388E3C;
+  bottom: -50px;
+  left: -50px;
+  animation: floatCircle 15s infinite alternate-reverse;
+}
+
+.blurCircle3 {
+  width: 500px;
+  height: 500px;
+  background: #1B5E20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: floatCircle 25s infinite alternate;
+}
+
+/* Floating Particles */
+.floatingParticle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.particle1 { top: 10%; left: 20%; animation: float 20s infinite; }
+.particle2 { top: 30%; right: 25%; animation: float 15s infinite; }
+.particle3 { bottom: 40%; left: 40%; animation: float 18s infinite; }
+.particle4 { top: 60%; right: 15%; animation: float 22s infinite; }
+.particle5 { bottom: 20%; left: 50%; animation: float 25s infinite; }
+
+/* Floating Dots */
+.floatingDot {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+}
+
+.dot1 { top: 5%; left: 10%; animation: twinkle 4s infinite; }
+.dot2 { top: 15%; right: 20%; animation: twinkle 3s infinite; }
+.dot3 { top: 25%; left: 30%; animation: twinkle 5s infinite; }
+.dot4 { top: 35%; right: 40%; animation: twinkle 4s infinite; }
+.dot5 { top: 45%; left: 50%; animation: twinkle 3s infinite; }
+.dot6 { top: 55%; right: 60%; animation: twinkle 5s infinite; }
+.dot7 { top: 65%; left: 70%; animation: twinkle 4s infinite; }
+.dot8 { top: 75%; right: 80%; animation: twinkle 3s infinite; }
+.dot9 { top: 85%; left: 90%; animation: twinkle 5s infinite; }
+.dot10 { top: 10%; left: 95%; animation: twinkle 4s infinite; }
+.dot11 { top: 20%; right: 85%; animation: twinkle 3s infinite; }
+.dot12 { top: 30%; left: 75%; animation: twinkle 5s infinite; }
+.dot13 { top: 40%; right: 65%; animation: twinkle 4s infinite; }
+.dot14 { top: 50%; left: 55%; animation: twinkle 3s infinite; }
+.dot15 { top: 60%; right: 45%; animation: twinkle 5s infinite; }
+.dot16 { top: 70%; left: 35%; animation: twinkle 4s infinite; }
+.dot17 { top: 80%; right: 25%; animation: twinkle 3s infinite; }
+.dot18 { top: 90%; left: 15%; animation: twinkle 5s infinite; }
+.dot19 { top: 95%; right: 5%; animation: twinkle 4s infinite; }
+.dot20 { top: 15%; left: 85%; animation: twinkle 3s infinite; }
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-10px, 10px);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  75% {
+    transform: translate(-10px, -10px);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes floatCircle {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+} 

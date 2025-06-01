@@ -1,0 +1,31 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: var(--main-color);
+  color: white;
+  border-radius: 32px;
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  transform: scale(1);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  height: 36px;
+  width: 36px;
+  margin: 0;
+  padding: 0;
+} 
