@@ -75,6 +75,32 @@
   background: #333;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.logoImage {
+  height: 2rem;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(11%) saturate(1303%) hue-rotate(64deg) brightness(96%) contrast(87%);
+}
+
+.logoText {
+  color: #8BCC5B;
+  letter-spacing: 0em;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .navMenu {
     display: none;

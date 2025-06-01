@@ -1,3 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #161616;
+    --main-color: #8BCC5B;
+    --text-color: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-bg-hover: rgba(255, 255, 255, 0.08);
+    --transition: all 0.3s ease;
+    --max-width: 1400px;
+    --side-padding: 5%;
+    --mobile-padding: 20px;
+    --animated-bg-color-1: rgba(139, 204, 91, 0.15);
+    --animated-bg-color-2: rgba(139, 204, 91, 0.08);
+    --animated-bg-color-3: rgba(139, 204, 91, 0.12);
+    --heading-font: 'Outfit', sans-serif;
+    --body-font: 'Spline Sans', sans-serif;
+    --border-radius-sm: 8px;
+    --border-radius-md: 15px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 30px;
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.2);
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+  }
+}
+
 html,
 body {
   padding: 0;

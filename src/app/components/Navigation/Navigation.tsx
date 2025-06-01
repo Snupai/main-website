@@ -11,9 +11,9 @@ export default function Navigation() {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <div className={styles.navLogo}>
-          <Link href="/">
-            <span className={styles.logoIcon}>🌿</span> 
-            Astra<span>kit</span>
+          <Link href="/" className={styles.logo}>
+            <img src="/favicon.png" alt="Astrakit Logo" className={styles.logoImage}/>
+            <span className={styles.logoText}>Astrakit</span>
           </Link>
         </div>
         <ul className={styles.navMenu}>
