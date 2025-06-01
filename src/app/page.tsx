@@ -28,6 +28,43 @@ export default function Home() {
   return (
     <div className={styles.pageWrapper}>
       <Navigation />
+      
+      {/* Background Elements */}
+      <div className={styles.backgroundElements}>
+        <div className={styles.blurCircle1}></div>
+        <div className={styles.blurCircle2}></div>
+        <div className={styles.blurCircle3}></div>
+        
+        {/* Floating Particles */}
+        <div className={`${styles.floatingParticle} ${styles.particle1}`}></div>
+        <div className={`${styles.floatingParticle} ${styles.particle2}`}></div>
+        <div className={`${styles.floatingParticle} ${styles.particle3}`}></div>
+        <div className={`${styles.floatingParticle} ${styles.particle4}`}></div>
+        <div className={`${styles.floatingParticle} ${styles.particle5}`}></div>
+        
+        {/* Floating Dots */}
+        <div className={`${styles.floatingDot} ${styles.dot1}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot2}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot3}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot4}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot5}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot6}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot7}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot8}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot9}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot10}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot11}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot12}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot13}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot14}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot15}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot16}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot17}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot18}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot19}`}></div>
+        <div className={`${styles.floatingDot} ${styles.dot20}`}></div>
+      </div>
+      
       <div className={styles.mainContent}>
         {/* Hero Section */}
         <section className={styles.hero}>

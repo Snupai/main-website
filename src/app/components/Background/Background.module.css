@@ -29,7 +29,7 @@
 .blurCircle2 {
   width: 400px;
   height: 400px;
-  background: #388E3C;
+  background: var(--main-color);
   bottom: -50px;
   left: -50px;
   animation: floatCircle 15s infinite alternate-reverse;
@@ -38,7 +38,7 @@
 .blurCircle3 {
   width: 500px;
   height: 500px;
-  background: #1B5E20;
+  background: var(--main-color);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -30,7 +30,7 @@
 .blurCircle1 {
   width: 600px;
   height: 600px;
-  background: #4CAF50;
+  background: var(--primary-200);
   top: -100px;
   right: -100px;
   animation: floatCircle 20s infinite alternate;
@@ -39,7 +39,7 @@
 .blurCircle2 {
   width: 400px;
   height: 400px;
-  background: #388E3C;
+  background: var(--secondary-300);
   bottom: -50px;
   left: -50px;
   animation: floatCircle 15s infinite alternate-reverse;
@@ -48,7 +48,7 @@
 .blurCircle3 {
   width: 500px;
   height: 500px;
-  background: #1B5E20;
+  background: var(--accent-400);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -314,17 +314,17 @@
 .footerBrandTitle {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #4CAF50;
+  color: var(--primary-200);
 }
 
 .footerBrandText {
-  color: #cccccc;
+  color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.95rem;
 }
 
 .footerLinksTitle {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
@@ -336,7 +336,7 @@
 }
 
 .footerLink {
-  color: #cccccc;
+  color: var(--text-secondary);
   text-decoration: none;
   display: block;
   margin-bottom: 12px;
@@ -345,14 +345,14 @@
 }
 
 .footerLink:hover {
-  color: #4CAF50;
+  color: var(--primary-200);
 }
 
 .footerBottom {
   text-align: center;
-  color: #cccccc;
+  color: var(--text-secondary);
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-color);
   font-size: 0.9rem;
 }
 
@@ -364,26 +364,43 @@
   .team,
   .download,
   .contact {
-    margin: 80px 0;  /* Slightly reduced spacing on mobile */
+    margin: 60px 0;  /* Further reduced spacing for mobile */
+  }
+
+  .hero {
+    margin-top: 80px;  /* Account for fixed navbar */
   }
 
   .container {
     padding: 20px;
   }
 
-  .contactContent,
-  .footerGrid {
-    gap: 40px;
+  .featuresGrid,
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .footerGrid {
     grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
+    gap: 30px;
+    text-align: left;
   }
 
   .footer {
     padding: 40px 0 20px;
+    margin-top: 60px;
   }
 
   .footerBrand {
@@ -396,6 +413,138 @@
 
   .footerLink {
     margin-bottom: 10px;
+  }
+
+  /* Typography adjustments for mobile */
+  .heroTitle {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .sectionDescription {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+
+  .featureCard {
+    padding: 25px;
+    min-height: auto;
+  }
+
+  .featureCardTitle {
+    font-size: 1.25rem;
+  }
+
+  .featureCardText {
+    font-size: 0.9rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .downloadButtons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .downloadButton {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .screenshotPlaceholder {
+    height: 200px;
+  }
+
+  .galleryItemTitle {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  .contactForm {
+    gap: 15px;
+  }
+
+  /* Reduce floating elements on mobile for performance */
+  .floatingParticle,
+  .floatingDot {
+    display: none;
+  }
+
+  .blurCircle1,
+  .blurCircle2,
+  .blurCircle3 {
+    opacity: 0.1;
+    filter: blur(100px);
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .featuresGrid,
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .contactContent {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .featureCard {
+    padding: 20px;
   }
 }
 
@@ -410,28 +559,28 @@
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .heroTitleGreen {
-  color: #4CAF50;
+  color: var(--primary-200);
 }
 
 .heroDescription {
   font-size: 1.2rem;
-  color: #cccccc;
+  color: var(--text-secondary);
   max-width: 800px;
   margin: 0 auto 30px;
 }
 
 .userCount {
   font-size: 1.1rem;
-  color: #cccccc;
+  color: var(--text-secondary);
   margin-bottom: 40px;
 }
 
 .highlight {
-  color: #4CAF50;
+  color: var(--primary-200);
   font-weight: 700;
 }
 
@@ -439,11 +588,12 @@
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .primaryButton {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--primary-200);
+  color: var(--background-950);
   padding: 12px 30px;
   border-radius: 8px;
   text-decoration: none;
@@ -452,22 +602,22 @@
 }
 
 .primaryButton:hover {
-  background-color: #45a049;
+  background-color: var(--primary-300);
 }
 
 .secondaryButton {
   background-color: transparent;
-  color: white;
+  color: var(--text-primary);
   padding: 12px 30px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  border: 2px solid #4CAF50;
+  border: 2px solid var(--primary-200);
   transition: background-color 0.3s;
 }
 
 .secondaryButton:hover {
-  background-color: rgba(76, 175, 80, 0.1);
+  background-color: rgba(204, 153, 255, 0.1);
 }
 
 /* Features Section */
@@ -619,17 +769,18 @@
 }
 
 .downloadButton {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--primary-200);
+  color: var(--background-950);
   padding: 12px 30px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s;
+  display: inline-block;
 }
 
 .downloadButton:hover {
-  background-color: #45a049;
+  background-color: var(--primary-300);
 }
 
 /* Contact Section */
@@ -651,10 +802,11 @@
 .contactItemTitle {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: var(--text-primary);
 }
 
 .contactItemText {
-  color: #cccccc;
+  color: var(--text-secondary);
   text-decoration: none;
 }
 
@@ -666,12 +818,27 @@
 
 .formInput,
 .formTextarea {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(25, 7, 44, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
   padding: 12px;
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--text-primary);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--primary-200);
+  background-color: rgba(25, 7, 44, 0.5);
 }
 
 .formTextarea {
@@ -680,8 +847,8 @@
 }
 
 .submitButton {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--primary-200);
+  color: var(--background-950);
   padding: 12px 30px;
   border: none;
   border-radius: 8px;
@@ -691,5 +858,5 @@
 }
 
 .submitButton:hover {
-  background-color: #45a049;
+  background-color: var(--primary-300);
 } 
