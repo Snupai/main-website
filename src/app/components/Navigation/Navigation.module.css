@@ -1,0 +1,108 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(13, 13, 13, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  font-size: 1.2rem;
+}
+
+.navLogo span {
+  color: #7AB24B;
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.navMenu a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.navMenu a:hover {
+  color: #fff;
+}
+
+.active {
+  font-weight: bold;
+  color: #000 !important;
+}
+
+.donateButton {
+  padding: 0.5rem 1rem;
+  background: #7AB24B;
+  color: #fff !important;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.donateButton:hover {
+  background: #8BC25B;
+}
+
+.donateButton.active {
+  background: #333;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.logoImage {
+  height: 2rem;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(11%) saturate(1303%) hue-rotate(64deg) brightness(96%) contrast(87%);
+}
+
+.logoText {
+  color: #8BCC5B;
+  letter-spacing: 0em;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navMenu {
+    display: none;
+  }
+} 
