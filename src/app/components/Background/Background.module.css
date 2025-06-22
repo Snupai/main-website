@@ -9,44 +9,44 @@
   pointer-events: none;
 }
 
+/* Start of Selection */
 /* Blur Circles with Enhanced Animations */
 .blurCircle1, .blurCircle2, .blurCircle3 {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(50px) blur(100px) blur(150px) blur(200px) blur(250px) blur(300px) blur(350px) blur(400px) blur(450px) blur(500px);
   opacity: 0;
-  animation-fill-mode: both;
 }
+/* End of Selection */
 
 .blurCircle1 {
-  width: 600px;
-  height: 600px;
-  background: var(--primary-400);
-  top: -100px;
-  right: -100px;
-  opacity: 0.3;
-  animation: floatCircle1 120s infinite ease-in-out;
+  width: 100vw;
+  height: 100vw;
+  background: var(--primary-400); /* Purple */
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  opacity: 0.25;
 }
 
 .blurCircle2 {
-  width: 400px;
-  height: 400px;
-  background: var(--secondary-400);
-  bottom: -50px;
-  left: -50px;
-  opacity: 0.25;
-  animation: floatCircle2 150s infinite ease-in-out reverse;
+  width: 80vw;
+  height: 80vw;
+  background: var(--secondary-400); /* Magenta */
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 0);
+  opacity: 0.2;
 }
 
 .blurCircle3 {
-  width: 500px;
-  height: 500px;
+  width: 60vw;
+  height: 40vw;
   background: var(--accent-400);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  right: 0;
+  transform: translate(-2%, 50%);
   opacity: 0.2;
-  animation: floatCircle3 180s infinite ease-in-out;
 }
 
 /* Floating Particles */

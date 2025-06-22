@@ -12,11 +12,11 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.container}>
             <h1 className={styles.heroTitle}>
-              Discover The<br />
-              <span className={styles.heroTitleGreen}>Future Of Chatting</span>
+            Better Chat.<br />
+              <span className={styles.heroTitleColour}>Astrakit.</span>
             </h1>
             <p className={styles.heroDescription}>
-              Free and open-source chat app with secure, seamless communication.
+              Experience truly secure and seamless communication with our free and open-source chat app.
             </p>
             <div className={styles.heroButtons}>
               <Link href="#download" className={styles.primaryButton}>Download Now</Link>
