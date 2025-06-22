@@ -15,8 +15,21 @@ export default function Background() {
       ))}
       
       {/* Random floating dots */}
-      {[...Array(20)].map((_, i) => (
+      {[...Array(30)].map((_, i) => (
         <div key={`dot-${i + 1}`} className={`${styles.floatingDot} ${styles[`dot${i + 1}`]}`}></div>
+      ))}
+
+      {/* Twinkling Stars */}
+      {[...Array(15)].map((_, i) => (
+        <div key={`star-${i + 1}`} className={`${styles.twinklingStar} ${styles[`star${i + 1}`]}`}>
+          <div className={styles.starCore}></div>
+          <div className={styles.starGlow}></div>
+        </div>
+      ))}
+
+      {/* Falling Stars */}
+      {[...Array(6)].map((_, i) => (
+        <div key={`fallingStar-${i + 1}`} className={`${styles.fallingStar} ${styles[`fallingStar${i + 1}`]}`}></div>
       ))}
     </div>
   );

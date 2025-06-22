@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(13, 5, 34, 0.7);
+  background: var(--background-950);
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid var(--border-color);
@@ -21,7 +21,7 @@
 .navLogo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-50);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -151,7 +151,7 @@
   right: -100%;
   width: 100%;
   height: 100vh;
-  background: rgba(12, 3, 22, 0.98);
+  background: var(--background-950);
   backdrop-filter: blur(20px);
   transition: right 0.3s ease-in-out;
   z-index: 999;

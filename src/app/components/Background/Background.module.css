@@ -9,40 +9,44 @@
   pointer-events: none;
 }
 
-/* Blur Circles */
+/* Blur Circles with Enhanced Animations */
 .blurCircle1, .blurCircle2, .blurCircle3 {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.15;
+  opacity: 0;
+  animation-fill-mode: both;
 }
 
 .blurCircle1 {
   width: 600px;
   height: 600px;
-  background: var(--main-color);
+  background: var(--primary-400);
   top: -100px;
   right: -100px;
-  animation: floatCircle 20s infinite alternate;
+  opacity: 0.3;
+  animation: floatCircle1 120s infinite ease-in-out;
 }
 
 .blurCircle2 {
   width: 400px;
   height: 400px;
-  background: var(--main-color);
+  background: var(--secondary-400);
   bottom: -50px;
   left: -50px;
-  animation: floatCircle 15s infinite alternate-reverse;
+  opacity: 0.25;
+  animation: floatCircle2 150s infinite ease-in-out reverse;
 }
 
 .blurCircle3 {
   width: 500px;
   height: 500px;
-  background: var(--main-color);
+  background: var(--accent-400);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: floatCircle 25s infinite alternate;
+  opacity: 0.2;
+  animation: floatCircle3 180s infinite ease-in-out;
 }
 
 /* Floating Particles */
@@ -50,58 +54,211 @@
   position: absolute;
   width: 3px;
   height: 3px;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--text-50);
   border-radius: 50%;
+  opacity: 0;
+  animation-fill-mode: both;
 }
 
-.particle1 { top: 10%; left: 20%; animation: float 20s infinite; }
-.particle2 { top: 30%; right: 25%; animation: float 15s infinite; }
-.particle3 { bottom: 40%; left: 40%; animation: float 18s infinite; }
-.particle4 { top: 60%; right: 15%; animation: float 22s infinite; }
-.particle5 { bottom: 20%; left: 50%; animation: float 25s infinite; }
+.particle1 { top: 10%; left: 20%; animation: float1 20s infinite ease-in-out, fadeInOut 15s infinite ease-in-out; }
+.particle2 { top: 30%; right: 25%; animation: float2 15s infinite ease-in-out, fadeInOut 12s infinite ease-in-out 1s; }
+.particle3 { bottom: 40%; left: 40%; animation: float3 18s infinite ease-in-out, fadeInOut 18s infinite ease-in-out 2s; }
+.particle4 { top: 60%; right: 15%; animation: float4 22s infinite ease-in-out, fadeInOut 14s infinite ease-in-out 3s; }
+.particle5 { bottom: 20%; left: 50%; animation: float5 25s infinite ease-in-out, fadeInOut 16s infinite ease-in-out 4s; }
 
 /* Floating Dots */
 .floatingDot {
   position: absolute;
   width: 2px;
   height: 2px;
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--text-100);
   border-radius: 50%;
+  opacity: 0;
+  animation-fill-mode: both;
 }
 
-.dot1 { top: 5%; left: 10%; animation: twinkle 4s infinite; }
-.dot2 { top: 15%; right: 20%; animation: twinkle 3s infinite; }
-.dot3 { top: 25%; left: 30%; animation: twinkle 5s infinite; }
-.dot4 { top: 35%; right: 40%; animation: twinkle 4s infinite; }
-.dot5 { top: 45%; left: 50%; animation: twinkle 3s infinite; }
-.dot6 { top: 55%; right: 60%; animation: twinkle 5s infinite; }
-.dot7 { top: 65%; left: 70%; animation: twinkle 4s infinite; }
-.dot8 { top: 75%; right: 80%; animation: twinkle 3s infinite; }
-.dot9 { top: 85%; left: 90%; animation: twinkle 5s infinite; }
-.dot10 { top: 10%; left: 95%; animation: twinkle 4s infinite; }
-.dot11 { top: 20%; right: 85%; animation: twinkle 3s infinite; }
-.dot12 { top: 30%; left: 75%; animation: twinkle 5s infinite; }
-.dot13 { top: 40%; right: 65%; animation: twinkle 4s infinite; }
-.dot14 { top: 50%; left: 55%; animation: twinkle 3s infinite; }
-.dot15 { top: 60%; right: 45%; animation: twinkle 5s infinite; }
-.dot16 { top: 70%; left: 35%; animation: twinkle 4s infinite; }
-.dot17 { top: 80%; right: 25%; animation: twinkle 3s infinite; }
-.dot18 { top: 90%; left: 15%; animation: twinkle 5s infinite; }
-.dot19 { top: 95%; right: 5%; animation: twinkle 4s infinite; }
-.dot20 { top: 15%; left: 85%; animation: twinkle 3s infinite; }
+.dot1 { top: 5%; left: 10%; animation: twinkle 4s infinite ease-in-out, fadeInOut 6s infinite ease-in-out; }
+.dot2 { top: 15%; right: 20%; animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out 0.5s; }
+.dot3 { top: 25%; left: 30%; animation: twinkle 5s infinite ease-in-out, fadeInOut 7s infinite ease-in-out 1s; }
+.dot4 { top: 35%; right: 40%; animation: twinkle 4s infinite ease-in-out, fadeInOut 6s infinite ease-in-out 1.5s; }
+.dot5 { top: 45%; left: 50%; animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out 2s; }
+.dot6 { top: 55%; right: 60%; animation: twinkle 5s infinite ease-in-out, fadeInOut 7s infinite ease-in-out 2.5s; }
+.dot7 { top: 65%; left: 70%; animation: twinkle 4s infinite ease-in-out, fadeInOut 6s infinite ease-in-out 3s; }
+.dot8 { top: 75%; right: 80%; animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out 3.5s; }
+.dot9 { top: 85%; left: 90%; animation: twinkle 5s infinite ease-in-out, fadeInOut 7s infinite ease-in-out 4s; }
+.dot10 { top: 10%; left: 95%; animation: twinkle 4s infinite ease-in-out, fadeInOut 6s infinite ease-in-out 4.5s; }
+.dot11 { top: 20%; right: 85%; animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out 5s; }
+.dot12 { top: 30%; left: 75%; animation: twinkle 5s infinite ease-in-out, fadeInOut 7s infinite ease-in-out 5.5s; }
+.dot13 { top: 40%; right: 65%; animation: twinkle 4s infinite ease-in-out, fadeInOut 6s infinite ease-in-out 6s; }
+.dot14 { top: 50%; left: 55%; animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out 6.5s; }
+.dot15 { top: 60%; right: 45%; animation: twinkle 5s infinite ease-in-out, fadeInOut 7s infinite ease-in-out 7s; }
+.dot16 { top: 70%; left: 35%; animation: twinkle 4s infinite ease-in-out, fadeInOut 6s infinite ease-in-out 7.5s; }
+.dot17 { top: 80%; right: 25%; animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out 8s; }
+.dot18 { top: 90%; left: 15%; animation: twinkle 5s infinite ease-in-out, fadeInOut 7s infinite ease-in-out 8.5s; }
+.dot19 { top: 95%; right: 5%; animation: twinkle 4s infinite ease-in-out, fadeInOut 6s infinite ease-in-out 9s; }
+.dot20 { top: 15%; left: 85%; animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out 9.5s; }
+.dot21 { top: 20%; left: 5%; animation: twinkle 3.5s infinite ease-in-out, fadeInOut 5.5s infinite ease-in-out 10s; }
+.dot22 { top: 40%; right: 8%; animation: twinkle 4.5s infinite ease-in-out, fadeInOut 6.5s infinite ease-in-out 10.5s; }
+.dot23 { top: 60%; left: 8%; animation: twinkle 4s infinite ease-in-out, fadeInOut 6s infinite ease-in-out 11s; }
+.dot24 { top: 80%; right: 12%; animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out 11.5s; }
+.dot25 { top: 90%; left: 12%; animation: twinkle 5s infinite ease-in-out, fadeInOut 7s infinite ease-in-out 12s; }
+.dot26 { top: 10%; right: 2%; animation: twinkle 3.8s infinite ease-in-out, fadeInOut 5.8s infinite ease-in-out 12.5s; }
+.dot27 { top: 50%; left: 2%; animation: twinkle 4.2s infinite ease-in-out, fadeInOut 6.2s infinite ease-in-out 13s; }
+.dot28 { top: 70%; right: 4%; animation: twinkle 4.8s infinite ease-in-out, fadeInOut 6.8s infinite ease-in-out 13.5s; }
+.dot29 { top: 30%; left: 18%; animation: twinkle 3.2s infinite ease-in-out, fadeInOut 5.2s infinite ease-in-out 14s; }
+.dot30 { top: 5%; right: 18%; animation: twinkle 5.2s infinite ease-in-out, fadeInOut 7.2s infinite ease-in-out 14.5s; }
 
-@keyframes float {
+/* Twinkling Stars */
+.twinklingStar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+.starCore {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  border-radius: 50%;
+  animation: starTwinkle 3s infinite ease-in-out;
+}
+
+.starGlow {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: starGlow 4s infinite ease-in-out;
+}
+
+/* Star positions and sizes with varied movement */
+.star1 { top: 8%; left: 12%; width: 4px; height: 4px; animation: starFloat1 12s infinite ease-in-out, fadeInOut 10s infinite ease-in-out; }
+.star2 { top: 18%; right: 18%; width: 3px; height: 3px; animation: starFloat2 15s infinite ease-in-out, fadeInOut 12s infinite ease-in-out 1s; }
+.star3 { top: 28%; left: 28%; width: 5px; height: 5px; animation: starFloat3 18s infinite ease-in-out, fadeInOut 14s infinite ease-in-out 2s; }
+.star4 { top: 38%; right: 38%; width: 3px; height: 3px; animation: starFloat4 14s infinite ease-in-out, fadeInOut 11s infinite ease-in-out 3s; }
+.star5 { top: 48%; left: 48%; width: 4px; height: 4px; animation: starFloat5 16s infinite ease-in-out, fadeInOut 13s infinite ease-in-out 4s; }
+.star6 { top: 58%; right: 58%; width: 3px; height: 3px; animation: starFloat6 13s infinite ease-in-out, fadeInOut 9s infinite ease-in-out 5s; }
+.star7 { top: 68%; left: 68%; width: 5px; height: 5px; animation: starFloat7 17s infinite ease-in-out, fadeInOut 15s infinite ease-in-out 6s; }
+.star8 { top: 78%; right: 78%; width: 3px; height: 3px; animation: starFloat8 15s infinite ease-in-out, fadeInOut 12s infinite ease-in-out 7s; }
+.star9 { top: 88%; left: 88%; width: 4px; height: 4px; animation: starFloat9 14s infinite ease-in-out, fadeInOut 10s infinite ease-in-out 8s; }
+.star10 { top: 12%; left: 92%; width: 3px; height: 3px; animation: starFloat10 16s infinite ease-in-out, fadeInOut 13s infinite ease-in-out 9s; }
+.star11 { top: 22%; right: 82%; width: 5px; height: 5px; animation: starFloat11 13s infinite ease-in-out, fadeInOut 11s infinite ease-in-out 10s; }
+.star12 { top: 32%; left: 72%; width: 3px; height: 3px; animation: starFloat12 18s infinite ease-in-out, fadeInOut 14s infinite ease-in-out 11s; }
+.star13 { top: 42%; right: 62%; width: 4px; height: 4px; animation: starFloat13 15s infinite ease-in-out, fadeInOut 12s infinite ease-in-out 12s; }
+.star14 { top: 52%; left: 52%; width: 3px; height: 3px; animation: starFloat14 17s infinite ease-in-out, fadeInOut 13s infinite ease-in-out 13s; }
+.star15 { top: 62%; right: 42%; width: 5px; height: 5px; animation: starFloat15 14s infinite ease-in-out, fadeInOut 11s infinite ease-in-out 14s; }
+
+/* Moving Stars with varied directions */
+.movingStar {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+.starTrail {
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  transform-origin: left center;
+  animation: trailFade 2s infinite ease-out;
+}
+
+/* Moving star positions with varied directions and speeds */
+.movingStar1 { top: 15%; left: -10px; animation: moveStarDiagonal1 8s infinite linear, fadeInOut 6s infinite ease-in-out; }
+.movingStar2 { top: 35%; right: -10px; animation: moveStarDiagonal2 12s infinite linear, fadeInOut 8s infinite ease-in-out 1s; }
+.movingStar3 { top: 55%; left: -10px; animation: moveStarVertical1 10s infinite linear, fadeInOut 7s infinite ease-in-out 2s; }
+.movingStar4 { top: 75%; right: -10px; animation: moveStarDiagonal3 14s infinite linear, fadeInOut 9s infinite ease-in-out 3s; }
+.movingStar5 { top: 25%; left: -10px; animation: moveStarCurved1 9s infinite linear, fadeInOut 6s infinite ease-in-out 4s; }
+.movingStar6 { top: 45%; right: -10px; animation: moveStarVertical2 11s infinite linear, fadeInOut 8s infinite ease-in-out 5s; }
+.movingStar7 { top: 65%; left: -10px; animation: moveStarDiagonal4 13s infinite linear, fadeInOut 7s infinite ease-in-out 6s; }
+.movingStar8 { top: 85%; right: -10px; animation: moveStarCurved2 7s infinite linear, fadeInOut 5s infinite ease-in-out 7s; }
+
+/* Enhanced Keyframe Animations */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+}
+
+@keyframes float1 {
   0%, 100% {
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(-10px, 10px);
+    transform: translate(-15px, 12px);
   }
   50% {
-    transform: translate(10px, -10px);
+    transform: translate(8px, -18px);
   }
   75% {
-    transform: translate(-10px, -10px);
+    transform: translate(-5px, -8px);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(12px, -10px);
+  }
+  66% {
+    transform: translate(-8px, 15px);
+  }
+}
+
+@keyframes float3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-10px, -12px);
+  }
+  50% {
+    transform: translate(15px, 8px);
+  }
+  75% {
+    transform: translate(-5px, 10px);
+  }
+}
+
+@keyframes float4 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(8px, 12px);
+  }
+  66% {
+    transform: translate(-12px, -8px);
+  }
+}
+
+@keyframes float5 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-8px, -15px);
+  }
+  50% {
+    transform: translate(10px, 8px);
+  }
+  75% {
+    transform: translate(-12px, 5px);
   }
 }
 
@@ -116,11 +273,366 @@
   }
 }
 
-@keyframes floatCircle {
-  0% {
+@keyframes floatCircle1 {
+  0%, 100% {
     transform: translate(0, 0);
   }
-  100% {
-    transform: translate(50px, 50px);
+  7% {
+    transform: translate(85px, -45px);
   }
+  23% {
+    transform: translate(-120px, 67px);
+  }
+  41% {
+    transform: translate(93px, 134px);
+  }
+  58% {
+    transform: translate(-67px, -89px);
+  }
+  76% {
+    transform: translate(156px, -23px);
+  }
+  89% {
+    transform: translate(-34px, 178px);
+  }
+}
+
+@keyframes floatCircle2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  13% {
+    transform: translate(-145px, 78px);
+  }
+  31% {
+    transform: translate(67px, -156px);
+  }
+  49% {
+    transform: translate(-89px, -34px);
+  }
+  68% {
+    transform: translate(123px, 145px);
+  }
+  82% {
+    transform: translate(-56px, 92px);
+  }
+  94% {
+    transform: translate(178px, -67px);
+  }
+}
+
+@keyframes floatCircle3 {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  11% {
+    transform: translate(-35%, -85%);
+  }
+  27% {
+    transform: translate(-78%, -23%);
+  }
+  44% {
+    transform: translate(-12%, -92%);
+  }
+  61% {
+    transform: translate(-89%, -67%);
+  }
+  78% {
+    transform: translate(-23%, -45%);
+  }
+  91% {
+    transform: translate(-67%, -78%);
+  }
+}
+
+@keyframes pulseCircle {
+  0%, 100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes starGlow {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.2);
+  }
+}
+
+/* Varied star floating animations */
+@keyframes starFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(8px, -6px); }
+  50% { transform: translate(-4px, 8px); }
+  75% { transform: translate(6px, 4px); }
+}
+
+@keyframes starFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(-6px, 10px); }
+  66% { transform: translate(8px, -4px); }
+}
+
+@keyframes starFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-8px, -6px); }
+  50% { transform: translate(10px, 8px); }
+  75% { transform: translate(-4px, 6px); }
+}
+
+@keyframes starFloat4 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(6px, 8px); }
+  66% { transform: translate(-8px, -6px); }
+}
+
+@keyframes starFloat5 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-6px, -10px); }
+  50% { transform: translate(8px, 6px); }
+  75% { transform: translate(-8px, 4px); }
+}
+
+@keyframes starFloat6 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(10px, -6px); }
+  66% { transform: translate(-6px, 8px); }
+}
+
+@keyframes starFloat7 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-8px, 6px); }
+  50% { transform: translate(6px, -8px); }
+  75% { transform: translate(8px, 4px); }
+}
+
+@keyframes starFloat8 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(6px, 10px); }
+  66% { transform: translate(-10px, -4px); }
+}
+
+@keyframes starFloat9 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-6px, -8px); }
+  50% { transform: translate(8px, 6px); }
+  75% { transform: translate(-4px, 8px); }
+}
+
+@keyframes starFloat10 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(8px, -8px); }
+  66% { transform: translate(-6px, 6px); }
+}
+
+@keyframes starFloat11 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-10px, 4px); }
+  50% { transform: translate(6px, -6px); }
+  75% { transform: translate(8px, 8px); }
+}
+
+@keyframes starFloat12 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(6px, 8px); }
+  66% { transform: translate(-8px, -6px); }
+}
+
+@keyframes starFloat13 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-8px, -6px); }
+  50% { transform: translate(10px, 8px); }
+  75% { transform: translate(-6px, 4px); }
+}
+
+@keyframes starFloat14 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(8px, -8px); }
+  66% { transform: translate(-6px, 6px); }
+}
+
+@keyframes starFloat15 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-6px, 10px); }
+  50% { transform: translate(8px, -4px); }
+  75% { transform: translate(-8px, 6px); }
+}
+
+/* Moving star animations with varied directions */
+@keyframes moveStarDiagonal1 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(25vw + 10px), calc(15vh + 10px)); }
+  50% { transform: translate(calc(50vw + 15px), calc(30vh + 15px)); }
+  75% { transform: translate(calc(75vw + 18px), calc(45vh + 18px)); }
+  100% { transform: translate(calc(100vw + 20px), calc(60vh + 20px)); }
+}
+
+@keyframes moveStarDiagonal2 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(-25vw - 10px), calc(20vh + 10px)); }
+  50% { transform: translate(calc(-50vw - 15px), calc(40vh + 15px)); }
+  75% { transform: translate(calc(-75vw - 18px), calc(60vh + 18px)); }
+  100% { transform: translate(calc(-100vw - 20px), calc(80vh + 20px)); }
+}
+
+@keyframes moveStarVertical1 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(10vw + 5px), calc(25vh + 5px)); }
+  50% { transform: translate(calc(5vw + 3px), calc(50vh + 10px)); }
+  75% { transform: translate(calc(-5vw - 3px), calc(75vh + 15px)); }
+  100% { transform: translate(calc(-10vw - 5px), calc(100vh + 20px)); }
+}
+
+@keyframes moveStarDiagonal3 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(30vw + 15px), calc(-20vh - 10px)); }
+  50% { transform: translate(calc(60vw + 25px), calc(-40vh - 20px)); }
+  75% { transform: translate(calc(90vw + 30px), calc(-60vh - 30px)); }
+  100% { transform: translate(calc(100vw + 35px), calc(-80vh - 35px)); }
+}
+
+@keyframes moveStarCurved1 {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(calc(20vw + 10px), calc(10vh + 5px)); }
+  40% { transform: translate(calc(40vw + 20px), calc(5vh + 3px)); }
+  60% { transform: translate(calc(60vw + 30px), calc(15vh + 8px)); }
+  80% { transform: translate(calc(80vw + 35px), calc(25vh + 12px)); }
+  100% { transform: translate(calc(100vw + 40px), calc(35vh + 15px)); }
+}
+
+@keyframes moveStarVertical2 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(-15vw - 8px), calc(25vh + 8px)); }
+  50% { transform: translate(calc(-8vw - 4px), calc(50vh + 15px)); }
+  75% { transform: translate(calc(8vw + 4px), calc(75vh + 22px)); }
+  100% { transform: translate(calc(15vw + 8px), calc(100vh + 25px)); }
+}
+
+@keyframes moveStarDiagonal4 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(-20vw - 10px), calc(-15vh - 8px)); }
+  50% { transform: translate(calc(-40vw - 20px), calc(-30vh - 15px)); }
+  75% { transform: translate(calc(-60vw - 30px), calc(-45vh - 22px)); }
+  100% { transform: translate(calc(-80vw - 40px), calc(-60vh - 30px)); }
+}
+
+@keyframes moveStarCurved2 {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(calc(-20vw - 10px), calc(-8vh - 4px)); }
+  40% { transform: translate(calc(-40vw - 20px), calc(-20vh - 10px)); }
+  60% { transform: translate(calc(-60vw - 30px), calc(-15vh - 8px)); }
+  80% { transform: translate(calc(-80vw - 35px), calc(-25vh - 12px)); }
+  100% { transform: translate(calc(-100vw - 40px), calc(-35vh - 15px)); }
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+
+/* Falling Stars */
+.fallingStar {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+/* Falling star positions with varied angles, speeds, and lifetimes */
+.fallingStar1 { 
+  top: -20px; 
+  left: 10%; 
+  animation: fallStar1 4s infinite linear, fadeInOut 3s infinite ease-in-out; 
+}
+
+.fallingStar2 { 
+  top: -20px; 
+  left: 30%; 
+  animation: fallStar2 6s infinite linear, fadeInOut 4s infinite ease-in-out 1s; 
+}
+
+.fallingStar3 { 
+  top: -20px; 
+  left: 50%; 
+  animation: fallStar3 3.5s infinite linear, fadeInOut 2.5s infinite ease-in-out 2s; 
+}
+
+.fallingStar4 { 
+  top: -20px; 
+  left: 70%; 
+  animation: fallStar4 5s infinite linear, fadeInOut 3.5s infinite ease-in-out 3s; 
+}
+
+.fallingStar5 { 
+  top: -20px; 
+  left: 85%; 
+  animation: fallStar5 4.5s infinite linear, fadeInOut 3s infinite ease-in-out 4s; 
+}
+
+.fallingStar6 { 
+  top: -20px; 
+  left: 95%; 
+  animation: fallStar6 7s infinite linear, fadeInOut 5s infinite ease-in-out 5s; 
+}
+
+/* Falling star animations with varied angles and speeds */
+@keyframes fallStar1 {
+  0% { transform: translate(0, 0) rotate(15deg); }
+  100% { transform: translate(calc(100vw + 100px), calc(100vh + 100px)) rotate(15deg); }
+}
+
+@keyframes fallStar2 {
+  0% { transform: translate(0, 0) rotate(25deg); }
+  100% { transform: translate(calc(80vw + 80px), calc(100vh + 100px)) rotate(25deg); }
+}
+
+@keyframes fallStar3 {
+  0% { transform: translate(0, 0) rotate(35deg); }
+  100% { transform: translate(calc(120vw + 120px), calc(100vh + 100px)) rotate(35deg); }
+}
+
+@keyframes fallStar4 {
+  0% { transform: translate(0, 0) rotate(20deg); }
+  100% { transform: translate(calc(90vw + 90px), calc(100vh + 100px)) rotate(20deg); }
+}
+
+@keyframes fallStar5 {
+  0% { transform: translate(0, 0) rotate(30deg); }
+  100% { transform: translate(calc(110vw + 110px), calc(100vh + 100px)) rotate(30deg); }
+}
+
+@keyframes fallStar6 {
+  0% { transform: translate(0, 0) rotate(40deg); }
+  100% { transform: translate(calc(70vw + 70px), calc(100vh + 100px)) rotate(40deg); }
 } 

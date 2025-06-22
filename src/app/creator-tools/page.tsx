@@ -12,25 +12,25 @@ export default function CreatorTools() {
       <div className={styles.container}>
         <h1 className={styles.title}>Creator Tools</h1>
         <p className={styles.description}>
-          Enhance your content creation with Astrakit's powerful suite of tools designed specifically for creators.
+          Tools for content creators.
         </p>
 
         <div className={styles.toolsGrid}>
           <div className={styles.toolCard}>
             <h2>Stream Integration</h2>
-            <p>Seamlessly integrate Astrakit chat into your live streams with customizable overlays and real-time interaction.</p>
+            <p>Integrate Astrakit chat into your live streams.</p>
           </div>
           <div className={styles.toolCard}>
             <h2>Moderation Suite</h2>
-            <p>Advanced moderation tools to keep your community safe and engaged with automated filters and custom rules.</p>
+            <p>Advanced moderation tools to keep your community safe.</p>
           </div>
           <div className={styles.toolCard}>
             <h2>Analytics Dashboard</h2>
-            <p>Track engagement, growth, and community metrics with our comprehensive analytics platform.</p>
+            <p>Track engagement and community metrics.</p>
           </div>
           <div className={styles.toolCard}>
             <h2>Custom Bots</h2>
-            <p>Create and deploy custom bots to automate tasks, engage with your audience, and enhance the chat experience.</p>
+            <p>Create custom bots to automate tasks and engage with your audience.</p>
           </div>
         </div>
       </div>

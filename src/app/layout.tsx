@@ -1,7 +1,9 @@
-import './globals.css'
+import '../styles/globals.css'
 import type { Metadata } from 'next'
 import Background from './components/Background/Background'
 import BuyMeCoffee from './components/BuyMeCoffee/BuyMeCoffee'
+import Navigation from './components/Navigation/Navigation'
+import Footer from './components/Footer/Footer'
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Background />
+        <Navigation />
         {children}
+        <Footer />
         <BuyMeCoffee />
       </body>
     </html>

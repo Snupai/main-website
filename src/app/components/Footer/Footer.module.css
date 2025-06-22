@@ -1,0 +1,260 @@
+.footer {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 80px 0 30px;
+  margin-top: 120px;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+/* Brand Section */
+.brandSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.brandTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-300) 0%, var(--accent-300) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.brandDescription {
+  color: var(--text-200);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+  max-width: 400px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text-300);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-400);
+  color: var(--primary-300);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(127, 0, 255, 0.2);
+}
+
+/* Links Section */
+.linksSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.linkGroupTitle {
+  color: var(--text-50);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  color: var(--text-300);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 4px 0;
+}
+
+.link:hover {
+  color: var(--primary-300);
+  transform: translateX(4px);
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--primary-400), var(--accent-400));
+  transition: width 0.3s ease;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+}
+
+.footerBottomContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyright {
+  color: var(--text-400);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  color: var(--text-400);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.legalLink:hover {
+  color: var(--primary-300);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .linksSection {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 30px;
+    margin-top: 80px;
+  }
+  
+  .footerContent {
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .brandTitle {
+    font-size: 1.75rem;
+  }
+  
+  .brandDescription {
+    font-size: 0.95rem;
+  }
+  
+  .linksSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  
+  .footerBottomContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .legalLinks {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 50px 0 25px;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .footerContent {
+    gap: 40px;
+  }
+  
+  .brandTitle {
+    font-size: 1.5rem;
+  }
+  
+  .linksSection {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .linkGroup {
+    text-align: center;
+  }
+  
+  .socialLinks {
+    justify-content: center;
+  }
+  
+  .legalLinks {
+    flex-direction: column;
+    gap: 10px;
+  }
+} 
