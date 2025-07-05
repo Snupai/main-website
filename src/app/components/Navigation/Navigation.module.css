@@ -1,11 +1,32 @@
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  background: var(--background-950);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid var(--border-color);
+  left: 0;
+  right: 0;
+  height: 6rem;
+  z-index: 50;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.backdropBlur {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(12px);
+  mask-image: linear-gradient(
+    to top,
+    transparent,
+    rgba(0, 0, 0, 0.05) 1%,
+    rgba(0, 0, 0, 0.4) 10%,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0.8) 60%,
+    black 85%,
+    black
+  );
 }
 
 .navContainer {
@@ -16,6 +37,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  height: 4rem;
 }
 
 .navLogo a {
