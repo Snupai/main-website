@@ -20,11 +20,11 @@
   mask-image: linear-gradient(
     to top,
     transparent,
-    rgba(0, 0, 0, 0.05) 1%,
-    rgba(0, 0, 0, 0.4) 10%,
-    rgba(0, 0, 0, 0.7) 30%,
-    rgba(0, 0, 0, 0.8) 60%,
-    black 85%,
+    rgba(0, 0, 0, 0.2) 1%,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.9) 60%,
+    black 95%,
     black
   );
 }
