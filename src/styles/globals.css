@@ -164,18 +164,18 @@ a {
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background-950);
+  background: var(--background-900);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-400);
+  background: var(--primary-800);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-300);
+  background: var(--primary-700);
 }
