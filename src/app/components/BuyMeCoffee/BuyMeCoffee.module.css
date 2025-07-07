@@ -4,7 +4,7 @@
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: var(--main-color);
+  background: var(--primary-200);
   color: white;
   border-radius: 32px;
   position: fixed;
