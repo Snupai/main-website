@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
   :root {
     --text-50: #f3e7fe;
     --text-100: #e8cefd;
@@ -136,7 +133,6 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
   }
-}
 
 html,
 body {

@@ -1,6 +1,4 @@
-'use client';
-
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -41,30 +39,30 @@ export default function Footer() {
             <div className={styles.linkGroup}>
               <h4 className={styles.linkGroupTitle}>Product</h4>
               <ul className={styles.linkList}>
-                <li><Link href="#download" className={styles.link}>Download</Link></li>
-                <li><Link href="/creator-tools" className={styles.link}>Creator Tools</Link></li>
-                <li><Link href="#" className={styles.link}>Features</Link></li>
-                <li><Link href="#" className={styles.link}>Roadmap</Link></li>
+                <li><a href="#download" className={styles.link}>Download</a></li>
+                <li><Link to="/creator-tools" className={styles.link}>Creator Tools</Link></li>
+                <li><a href="#" className={styles.link}>Features</a></li>
+                <li><a href="#" className={styles.link}>Roadmap</a></li>
               </ul>
             </div>
 
             <div className={styles.linkGroup}>
               <h4 className={styles.linkGroupTitle}>Support</h4>
               <ul className={styles.linkList}>
-                <li><Link href="#" className={styles.link}>Documentation</Link></li>
-                <li><Link href="#" className={styles.link}>Help Center</Link></li>
-                <li><Link href="#" className={styles.link}>Community</Link></li>
-                <li><Link href="#" className={styles.link}>Contact</Link></li>
+                <li><a href="#" className={styles.link}>Documentation</a></li>
+                <li><a href="#" className={styles.link}>Help Center</a></li>
+                <li><a href="#" className={styles.link}>Community</a></li>
+                <li><a href="#" className={styles.link}>Contact</a></li>
               </ul>
             </div>
 
             <div className={styles.linkGroup}>
               <h4 className={styles.linkGroupTitle}>Company</h4>
               <ul className={styles.linkList}>
-                <li><Link href="#" className={styles.link}>About</Link></li>
-                <li><Link href="#" className={styles.link}>Blog</Link></li>
-                <li><Link href="/donate" className={styles.link}>Donate</Link></li>
-                <li><Link href="#" className={styles.link}>Privacy</Link></li>
+                <li><a href="#" className={styles.link}>About</a></li>
+                <li><a href="#" className={styles.link}>Blog</a></li>
+                <li><Link to="/donate" className={styles.link}>Donate</Link></li>
+                <li><a href="#" className={styles.link}>Privacy</a></li>
               </ul>
             </div>
           </div>
@@ -75,9 +73,9 @@ export default function Footer() {
           <div className={styles.footerBottomContent}>
             <p className={styles.copyright}>© 2025 Astrakit. All rights reserved.</p>
             <div className={styles.legalLinks}>
-              <Link href="#" className={styles.legalLink}>Privacy Policy</Link>
-              <Link href="#" className={styles.legalLink}>Terms of Service</Link>
-              <Link href="#" className={styles.legalLink}>Cookie Policy</Link>
+              <a href="#" className={styles.legalLink}>Privacy Policy</a>
+              <a href="#" className={styles.legalLink}>Terms of Service</a>
+              <a href="#" className={styles.legalLink}>Cookie Policy</a>
             </div>
           </div>
         </div>
