@@ -19,7 +19,7 @@ export default function Navigation() {
 
   return (
     <div className="relative">
-      <nav className="fixed top-0 left-0 right-0 z-50 h-20 bg-[var(--background-950)]/95 backdrop-blur-xl">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#18121e]/20 backdrop-blur-3xl rounded-b-2xl">
         <div className="container mx-auto max-w-6xl px-4 h-16 flex items-center justify-between relative">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 font-semibold text-xl">
@@ -46,7 +46,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden absolute top-20 left-0 right-0 bg-[var(--background-950)]/95 backdrop-blur-xl border-b border-[var(--primary-900)] rounded-b-2xl shadow-2xl transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-[500px] opacity-100 py-6' : 'max-h-0 opacity-0 py-0'}`}>
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[500px] opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
           <ul className="flex flex-col items-center gap-5 text-lg">
             <li><Link className="text-[var(--text-300)] hover:text-white transition-colors" to="/features" onClick={closeMenu}>Features</Link></li>
             <li><Link className="text-[var(--text-300)] hover:text-white transition-colors" to="/contact" onClick={closeMenu}>Contact</Link></li>
