@@ -3,31 +3,83 @@ export default function Features() {
         <main className="pt-32 relative overflow-hidden max-w-[1400px] mx-auto px-10 z-10">
             <h1 className="text-5xl text-center mb-12 font-semibold" style={{ color: 'var(--text-50)' }}>Features</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto pb-20">
-                <FeatureCard
-                    title="Secure & Encrypted"
-                    description="You have control over your data, with options to delete it at any time and customizable encryption methods."
-                />
-                <FeatureCard
-                    title="Temporary Message Storage"
-                    description="Messages are stored on our servers only until delivered and read, then automatically deleted, ensuring no long-term record on our infrastructure."
-                />
-                <FeatureCard
-                    title="Open source & Free"
-                    description="We believe that open source software combined with privacy should be accessible to everyone. We're funded only by donations."
-                />
-                <FeatureCard
-                    title="Transparent"
-                    description="We operate with complete transparency, providing open access to our source code and development process, by still keeping your data secure at any time."
-                />
-                <FeatureCard
-                    title="Feature packed"
-                    description="Astrakit is loaded with features that enhance your chatting experience. Stay tuned for upcoming features that will make communication even more enjoyable."
-                />
-                <FeatureCard
-                    title="Community Driven"
-                    description="Join a vibrant community of users and cats (hehe) who contribute to the continuous improvement and evolution of Astrakit."
-                />
+            <div className="space-y-24 pb-20">
+                {/* Core Features */}
+                <section>
+                    <h2 className="text-3xl font-semibold mb-8 text-[var(--text-100)]">Core Features</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <FeatureCard
+                            title="Secure & Encrypted"
+                            description="You have control over your data, with options to delete it at any time and customizable encryption methods."
+                        />
+                        <FeatureCard
+                            title="Temporary Message Storage"
+                            description="Messages are stored on our servers only until delivered and read, then automatically deleted, ensuring no long-term record on our infrastructure."
+                        />
+                        <FeatureCard
+                            title="Open source & Free"
+                            description="We believe that open source software combined with privacy should be accessible to everyone. We're funded only by donations."
+                        />
+                        <FeatureCard
+                            title="Transparent"
+                            description="We operate with complete transparency, providing open access to our source code and development process, by still keeping your data secure at any time."
+                        />
+                        <FeatureCard
+                            title="Feature packed"
+                            description="Astrakit is loaded with features that enhance your chatting experience. Stay tuned for upcoming features that will make communication even more enjoyable."
+                        />
+                        <FeatureCard
+                            title="Community Driven"
+                            description="Join a vibrant community of users and cats (hehe) who contribute to the continuous improvement and evolution of Astrakit."
+                        />
+                    </div>
+                </section>
+
+                {/* Profile Customization */}
+                <section>
+                    <h2 className="text-3xl font-semibold mb-8 text-[var(--text-100)]">Profile Customization</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <FeatureCard
+                            title="Profile Music"
+                            description="Express yourself with your favorite tunes directly on your profile."
+                        />
+                        <FeatureCard
+                            title="Animated Visuals"
+                            description="Bring your profile to life with animated profile pictures and banners."
+                        />
+                        <FeatureCard
+                            title="Profile Items"
+                            description="Showcase up to 10 unique items on your profile to share your interests."
+                        />
+                        <FeatureCard
+                            title="Profile Badges"
+                            description="Earn special badges assigned by the system or admins to show off your achievements."
+                        />
+                    </div>
+                </section>
+
+                {/* Other Features */}
+                <section>
+                    <h2 className="text-3xl font-semibold mb-8 text-[var(--text-100)]">Other Features</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <FeatureCard
+                            title="Astraverse"
+                            description="Explore the Astraverse and connect with others in a whole new way."
+                        />
+                        <FeatureCard
+                            title="Free Emojis & Stickers"
+                            description="Access a vast library of emojis and stickers completely for free."
+                        />
+                        <FeatureCard
+                            title="Rich Message Types"
+                            description="Send maps, timestamps, and more with our diverse message type support."
+                        />
+                        <FeatureCard
+                            title="Local Statistics"
+                            description="View detailed chat statistics processed locally on your device for privacy."
+                        />
+                    </div>
+                </section>
             </div>
         </main>
     )
