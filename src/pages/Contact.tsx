@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Contact() {
     return (
-        <main className="min-h-screen pt-32 max-w-[1400px] mx-auto px-10">
+        <main className="pt-32 max-w-[1400px] mx-auto px-10">
             <h1 className="text-5xl text-center mb-12 font-semibold" style={{ color: 'var(--text-50)' }}>
                 Get In Touch
             </h1>

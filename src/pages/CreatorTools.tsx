@@ -6,7 +6,7 @@ export default function CreatorTools() {
   const [activeTool, setActiveTool] = useState<'cropper' | 'trimmer'>('cropper');
 
   return (
-    <main className="min-h-screen pt-32 relative overflow-hidden max-w-[1400px] mx-auto px-10 z-10">
+    <main className="pt-32 relative overflow-hidden max-w-[1400px] mx-auto px-10 z-10">
       <div className="max-w-7xl mx-auto py-10 relative">
         <h1 className="text-5xl text-center mb-5 font-semibold" style={{ color: 'var(--text-50)' }}>
           Content <span className="text-[var(--primary-500)]">Creator Tools</span>

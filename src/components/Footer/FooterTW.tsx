@@ -30,26 +30,25 @@ export default function FooterTW() {
               <h4 className="text-white font-semibold mb-4">Product</h4>
               <ul className="space-y-2">
                 <li><Link className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" to="/creator-tools">Creator Tools</Link></li>
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">Features</a></li>
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">Roadmap</a></li>
+                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="/features">Features</a></li>
+                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="https://github.com/orgs/astrakit/projects/1/views/1">Roadmap</a></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">Support</h4>
               <ul className="space-y-2">
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">Documentation</a></li>
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">Help Center</a></li>
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">Community</a></li>
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">Contact</a></li>
+                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="https://docs.astrakit.cc/">Documentation</a></li>
+                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="https://astrakit.featurebase.app">Help Center</a></li>
+                {/* <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="">Community</a></li>
+                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="">Contact</a></li> */}
               </ul>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">About</a></li>
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">Blog</a></li>
+                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="">About</a></li>
+                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="">Blog</a></li>
                 <li><Link className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" to="/donate">Donate</Link></li>
-                <li><a className="text-[var(--text-300)] hover:text-[var(--primary-300)] transition" href="#">Privacy</a></li>
               </ul>
             </div>
           </div>
@@ -60,9 +59,9 @@ export default function FooterTW() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-[var(--text-400)] text-sm">© 2025 Astrakit. All rights reserved.</p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-[var(--text-400)] hover:text-[var(--primary-300)]">Privacy Policy</a>
-              <a href="#" className="text-[var(--text-400)] hover:text-[var(--primary-300)]">Terms of Service</a>
-              <a href="#" className="text-[var(--text-400)] hover:text-[var(--primary-300)]">Cookie Policy</a>
+              <a href="" className="text-[var(--text-400)] hover:text-[var(--primary-300)]">Privacy Policy</a>
+              <a href="" className="text-[var(--text-400)] hover:text-[var(--primary-300)]">Terms of Service</a>
+              <a href="" className="text-[var(--text-400)] hover:text-[var(--primary-300)]">Cookie Policy</a>
             </div>
           </div>
         </div>

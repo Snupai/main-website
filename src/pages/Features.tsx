@@ -1,6 +1,6 @@
 export default function Features() {
     return (
-        <main className="min-h-screen pt-32 relative overflow-hidden max-w-[1400px] mx-auto px-10 z-10">
+        <main className="pt-32 relative overflow-hidden max-w-[1400px] mx-auto px-10 z-10">
             <h1 className="text-5xl text-center mb-12 font-semibold" style={{ color: 'var(--text-50)' }}>Features</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto pb-20">

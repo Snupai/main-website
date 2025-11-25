@@ -18,7 +18,7 @@ const reasons = [
 
 export default function Donate() {
   return (
-    <main className="min-h-screen pt-32 relative overflow-hidden max-w-[1400px] mx-auto px-10 z-10">
+    <main className="pt-32 relative overflow-hidden max-w-[1400px] mx-auto px-10 z-10">
       <div className="max-w-7xl mx-auto py-10 relative">
         <h1 className="text-5xl text-center mb-5 font-semibold" style={{ color: 'var(--text-50)' }}>Support Astrakit</h1>
         <p className="text-center max-w-3xl mx-auto mb-16 text-lg leading-relaxed" style={{ color: 'var(--text-200)' }}>
