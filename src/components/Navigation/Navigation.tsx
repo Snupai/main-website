@@ -49,14 +49,14 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-0 right-0 left-0 h-screen bg-[var(--background-950)]/95 backdrop-blur-xl pt-24 transition-transform ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className={`md:hidden absolute top-20 left-0 right-0 bg-[var(--background-950)]/95 backdrop-blur-xl border-b border-[var(--primary-900)] rounded-b-2xl shadow-2xl transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-[500px] opacity-100 py-6' : 'max-h-0 opacity-0 py-0'}`}>
           <ul className="flex flex-col items-center gap-5 text-lg">
-            <li><Link className="text-[var(--text-300)] hover:text-white" to="/features">Features</Link></li>
-            <li><Link className="text-[var(--text-300)] hover:text-white" to="/gallery">Gallery</Link></li>
-            <li><Link className="text-[var(--text-300)] hover:text-white" to="/team">Team</Link></li>
-            <li><Link className="text-[var(--text-300)] hover:text-white" to="/download">Download</Link></li>
-            <li><Link className="text-[var(--text-300)] hover:text-white" to="/contact">Contact</Link></li>
-            <li><Link to="/creator-tools" onClick={closeMenu} className={`hover:text-white ${pathname === '/creator-tools' ? 'font-bold text-white' : 'text-[var(--text-300)]'}`}>Creator Tools</Link></li>
+            <li><Link className="text-[var(--text-300)] hover:text-white transition-colors" to="/features" onClick={closeMenu}>Features</Link></li>
+            <li><Link className="text-[var(--text-300)] hover:text-white transition-colors" to="/gallery" onClick={closeMenu}>Gallery</Link></li>
+            <li><Link className="text-[var(--text-300)] hover:text-white transition-colors" to="/team" onClick={closeMenu}>Team</Link></li>
+            <li><Link className="text-[var(--text-300)] hover:text-white transition-colors" to="/download" onClick={closeMenu}>Download</Link></li>
+            <li><Link className="text-[var(--text-300)] hover:text-white transition-colors" to="/contact" onClick={closeMenu}>Contact</Link></li>
+            <li><Link to="/creator-tools" onClick={closeMenu} className={`hover:text-white transition-colors ${pathname === '/creator-tools' ? 'font-bold text-white' : 'text-[var(--text-300)]'}`}>Creator Tools</Link></li>
             <li>
               <Link onClick={closeMenu} to="/donate" className={`rounded-md px-4 py-2 font-semibold transition-colors ${pathname === '/donate' ? 'bg-[var(--secondary-400)] text-[var(--background-950)]' : 'bg-[var(--primary-200)] text-[var(--background-950)] hover:bg-[var(--primary-300)]'}`}>Donate</Link>
             </li>
